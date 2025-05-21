@@ -8,7 +8,7 @@ const AsciiVideo = ({ asciinemaUrl, width = 800, height = 400 }) => {
     if (asciinemaUrl) {
         const match = asciinemaUrl.match(/asciinema\.org\/a\/([a-zA-Z0-9_-]+)/);
         if (match) {
-            embedUrl = `https://asciinema.org/a/${match[1]}/embed`;
+            embedUrl = `https://asciinema.org/a/720324`;
         }
     }
 

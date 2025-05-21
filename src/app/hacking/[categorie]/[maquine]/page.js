@@ -12,7 +12,7 @@ export default function PageMachine() {
             <TitleMachineMemo title={`Detalle de la máquina: ${maquine}`} />
             <p className="text-white">Categoría: {categorie}</p>
             {/* Aquí puedes mostrar más info de la máquina */}
-            <AsciiVideoMemo asciinemaUrl="https://asciinema.org/a/Gtcu0GiYRqiuVfB6wTZ7cn8Yn" />
+            <AsciiVideoMemo asciinemaUrl="https://asciinema.org/a/720324" />
         </div>
     );
 }
