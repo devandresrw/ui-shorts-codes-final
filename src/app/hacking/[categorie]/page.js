@@ -2,7 +2,6 @@
 import { useParams } from "next/navigation";
 import { CardCategorieMemo } from '@/components/ui/CardCategorie'
 import { WrapperCategoriesMemo } from "@/components/wrappers/WrapperCategories";
-import Link from "next/link";
 
 const data = {
     linux: [
