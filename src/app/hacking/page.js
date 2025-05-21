@@ -1,5 +1,6 @@
 'use client'
-import Link from "next/link";
+import { CardCategorieMemo } from '@/components/ui/CardCategorie'
+import { WrapperCategoriesMemo } from '@/components/wrappers/WrapperCategories'
 
 const categorias = [
     { nombre: "Linux", slug: "linux" },
@@ -10,17 +11,20 @@ const categorias = [
 export default function PageHacking() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center gap-6">
-            <h1 className="text-2xl text-white mb-6">Categorías de Hacking</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {categorias.map((cat) => (
-                    <Link
-                        key={cat.slug}
-                        href={`/hacking/${cat.slug}`}
-                        className="bg-gray-800 text-white rounded-lg p-6 shadow-md hover:bg-gray-700 transition"
-                    >
-                        {cat.nombre}
-                    </Link>
-                ))}
+            <div className=' text-center glahs px-2 py-4 gap-5'>
+                <h1 className=" text-white  fira-sans-bold text-2xl">Solved Routes Hacking</h1>
+                <WrapperCategoriesMemo>
+                    {categorias.map((cat) => (
+                        <CardCategorieMemo
+                            key={cat.slug}
+                            title={cat.nombre}
+                            descripcion={`Descripción de ${cat.nombre}`}
+                            slug={cat.slug}
+                            imagen={`/fondo.jpg`}
+                            link={`/hacking/${cat.slug}`}
+                        />
+                    ))}
+                </WrapperCategoriesMemo>
             </div>
         </div>
     );

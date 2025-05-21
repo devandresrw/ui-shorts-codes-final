@@ -1,5 +1,7 @@
 'use client'
 import { useParams } from "next/navigation";
+import { CardCategorieMemo } from '@/components/ui/CardCategorie'
+import { WrapperCategoriesMemo } from "@/components/wrappers/WrapperCategories";
 import Link from "next/link";
 
 const data = {
@@ -9,6 +11,8 @@ const data = {
     ],
     windows: [
         { nombre: "Maquina Windows 1", slug: "windows1" },
+        { nombre: "Maquina Windows 1", slug: "windows2" },
+        { nombre: "Maquina Windows 1", slug: "windows3" },
     ],
     web: [
         { nombre: "Maquina Web 1", slug: "web1" },
@@ -21,17 +25,20 @@ export default function PageCategorie() {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center gap-6">
-            <h1 className="text-2xl text-white mb-6">Categoría: {categorie}</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {maquinas.map((m) => (
-                    <Link
-                        key={m.slug}
-                        href={`/hacking/${categorie}/${m.slug}`}
-                        className="bg-gray-800 text-white rounded-lg p-6 shadow-md hover:bg-gray-700 transition"
-                    >
-                        {m.nombre}
-                    </Link>
-                ))}
+            <div className=' text-center glahs px-2 py-4 gap-5'>
+                <h1 className="text-2xl text-white mb-6">Categoría: {categorie}</h1>
+                <WrapperCategoriesMemo>
+                    {maquinas.map((m) => (
+                        <CardCategorieMemo
+                            key={m.slug}
+                            title={m.nombre}
+                            descripcion={`Descripción de ${m.nombre}`}
+                            slug={m.slug}
+                            imagen={`/fondo.jpg`}
+                            link={`/hacking/${categorie}/${m.slug}`}
+                        />
+                    ))}
+                </WrapperCategoriesMemo>
             </div>
         </div>
     );
