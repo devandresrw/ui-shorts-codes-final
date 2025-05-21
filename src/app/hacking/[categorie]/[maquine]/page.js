@@ -1,7 +1,7 @@
 'use client'
 import { useParams } from "next/navigation";
 import { TitleMachineMemo } from "@/components/ui/TitleMachine";
-import { AsciiVideoMemo } from "@/components/ui/AscciVideo";
+import Terminal from "@/components/ui/AscciVideo";
 
 export default function PageMachine() {
     const { categorie, maquine } = useParams();
@@ -9,10 +9,12 @@ export default function PageMachine() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center gap-6
         text-white ">
-            <TitleMachineMemo title={`Detalle de la máquina: ${maquine}`} />
-            <p className="text-white">Categoría: {categorie}</p>
-            {/* Aquí puedes mostrar más info de la máquina */}
-            <AsciiVideoMemo asciinemaUrl="https://asciinema.org/a/720324" />
+            <div className="glahs w-[24rem] p-5">
+                <TitleMachineMemo title={`${maquine}`} />
+                <p className="text-white fira-sans-bold text-2xl">Categoría: {categorie}</p>
+                {/* Aquí puedes mostrar más info de la máquina */}
+                <Terminal src="/machines/prueba.cast" />
+            </div>
         </div>
     );
 }

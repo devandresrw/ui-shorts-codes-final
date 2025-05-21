@@ -2,9 +2,8 @@ import { memo } from 'react';
 
 const TitleMachine = ({ title }) => {
     return (
-        <div>
-            <h2>{title}</h2>
-        </div>
+        <h2 className='glahs text-center fira-sans-bold text-4xl
+        '>{title}</h2>
     );
 };
 
