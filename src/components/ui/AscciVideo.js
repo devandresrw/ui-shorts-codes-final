@@ -21,7 +21,7 @@ export default function TerminalPlayer({ src, customCols, customRows }) {
 
                 // Usar las dimensiones del archivo o las personalizadas (si se proporcionaron)
                 // También aseguramos dimensiones mínimas razonables
-                const cols = customCols || header.width || 80;
+                const cols = customCols || header.width || 20;
                 const rows = customRows || header.height || 24;
 
                 setDimensions({ cols, rows });
@@ -34,9 +34,9 @@ export default function TerminalPlayer({ src, customCols, customRows }) {
                     theme: {
                         background: '#323232'
                     },
-                    cols: Math.max(cols, 80), // Asegurar un ancho mínimo de 80
+                    cols: Math.max(cols, 20), // Asegurar un ancho mínimo de 80
                     rows: rows,
-                    scrollback: 1000, // Permitir scroll
+                    scrollback: 100, // Permitir scroll
                     convertEol: true
                 });
 
@@ -60,7 +60,7 @@ export default function TerminalPlayer({ src, customCols, customRows }) {
                             const delay = event[0];
                             const content = event[2];
 
-                            time += delay * 1000;
+                            time += delay * 100;
                             setTimeout(() => {
                                 term.write(content);
                             }, time);
@@ -83,7 +83,7 @@ export default function TerminalPlayer({ src, customCols, customRows }) {
             style={{
                 height: '400px',
                 width: '100%',
-                background: 'black',
+                background: 'transparent',
                 borderRadius: '8px',
                 overflow: 'hidden'
             }}
