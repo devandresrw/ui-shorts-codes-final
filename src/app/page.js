@@ -3,10 +3,10 @@ import Link from "next/link"
 export default function Home() {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center">
-      <div className="text-white glahs w-[20rem] px-5 py-10 text-center
+      <div className="text-white glahs w-[40rem] px-5 py-10 text-center
       flex flex-col gap-5">
-        <h1 className="fira-sans-bold text-2xl">Ui para Rells <Link href="https://www.instagram.com/programmer.andresrw/">@programmer.andresrw</Link></h1>
-        <p>Hace un tiempo he querido mostrar mis avances en diferentes comunidades
+        <h1 className="fira-sans-bold text-4xl">Ui para Rells <Link href="https://www.instagram.com/programmer.andresrw/">@programmer.andresrw</Link></h1>
+        <p className="text-2xl">Hace un tiempo he querido mostrar mis avances en diferentes comunidades
           como frontendmentor, Codewars y  HackThebox. Por eso este proyecto
           esta es una ui que grabo para hacer mis shorts o rells.
         </p>

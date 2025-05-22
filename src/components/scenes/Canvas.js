@@ -14,7 +14,7 @@ const Scene = () => {
             <pointLight position={[10, 10, 10]} />
             <Sparkles
                 count={1500}
-                size={3}
+                size={20}
                 scale={[20, 20, 20]}
                 speed={0.5}
                 opacity={1}
