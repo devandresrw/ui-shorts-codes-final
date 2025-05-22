@@ -8,7 +8,23 @@ export const kyu8Problems = [
         ejemplos: [
             { entrada: "1, 2", salida: "3", explicacion: "1 + 2 = 3" },
         ],
-        solucion: "function sumar(a, b) {\n  return a + b;\n}",
+        solucion: `// Función que suma dos números
+            function sumar(a, b) {
+// Paso 1: Verificamos que los parámetros sean números
+if (typeof a !== 'number' 
+|| typeof b !== 'number') {
+throw new Error('Los parámetros deben ser números');
+}
+// Paso 2: Realizamos la suma
+const resultado = a + b;
+// Paso 3: Devolvemos el resultado
+return resultado;
+
+/* Nota: También podríamos simplificar esta función a:
+   return a + b;
+   Sin embargo, añadimos pasos para explicar el proceso.
+  */
+}`
     },
     {
         id: "suma-dos-numeros",

@@ -7,7 +7,7 @@ const Scene = () => {
     return (
         <Canvas
             camera={{ position: [0, 0, 5], fov: 75 }}
-            className=''
+            className='min-h-screen h-full w-full'
 
         >
             <ambientLight intensity={0.5} />
